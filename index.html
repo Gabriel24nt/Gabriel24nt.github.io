@@ -4,171 +4,529 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Professional portfolio of Alan Gabriel Nte — Corporate Finance, Equity Research, Financial Modeling and Strategic Intelligence.">
-<title>Alan Gabriel Nte | Finance & Strategy</title>
+<meta name="theme-color" content="#080d17">
+<meta name="description" content="Alan Gabriel Nte — Corporate Finance, Equity Research, Financial Modeling and Strategic Intelligence Portfolio.">
+<title>Alan Gabriel Nte | Finance & Strategic Intelligence</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root {
-  --bg:#080d18;
-  --panel:#101a2b;
-  --text:#edf2fa;
-  --muted:#a6b3c7;
-  --accent:#67c6bd;
-  --border:#24334a;
+:root{
+  --bg:#080d17;
+  --surface:#0e1725;
+  --surface2:#121e2f;
+  --white:#f4f5f2;
+  --muted:#a0adbd;
+  --gold:#c8a96b;
+  --gold2:#e2c995;
+  --line:rgba(200,169,107,.20);
+  --green:#83b9a4;
+  --max:1160px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  background:var(--bg);color:var(--white);
+  font-family:'DM Sans',sans-serif;line-height:1.7;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(ellipse at 80% 10%,rgba(37,70,95,.20),transparent 38%),
+    radial-gradient(ellipse at 10% 70%,rgba(150,117,65,.08),transparent 35%);
+}
 a{color:inherit;text-decoration:none}
-.container{width:min(1100px,90%);margin:auto}
-header{border-bottom:1px solid var(--border);padding:20px 0}
-nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.logo{font-size:20px;font-weight:bold;letter-spacing:1px}
-.logo span{color:var(--accent)}
-.navlinks{display:flex;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:14px}
-.navlinks a:hover{color:var(--accent)}
-.hero{padding:105px 0 85px;max-width:850px}
-.eyebrow{color:var(--accent);font-size:13px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
-h1{font-size:clamp(42px,7vw,68px);line-height:1.12;margin:20px 0}
-h1 span{color:var(--accent)}
-.hero p{color:var(--muted);font-size:18px;max-width:720px}
-.actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
-.btn{padding:12px 20px;border:1px solid var(--accent);border-radius:5px;font-weight:bold}
-.btn.primary{background:var(--accent);color:#07121a}
-.btn:hover{opacity:.85}
-section{padding:65px 0;border-top:1px solid var(--border)}
-.section-title{font-size:30px;margin-bottom:12px}
-.section-intro{color:var(--muted);margin-bottom:30px;max-width:700px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:24px}
-.card h3{font-size:20px;margin-bottom:10px}
-.card p{color:var(--muted);font-size:14px}
-.card a{display:inline-block;color:var(--accent);font-weight:bold;margin-top:18px}
-.tag{display:inline-block;color:var(--accent);font-size:12px;margin:12px 6px 0 0;padding:4px 9px;border:1px solid var(--border);border-radius:20px}
-.skills{display:flex;flex-wrap:wrap;gap:10px}
-.skill{background:var(--panel);border:1px solid var(--border);padding:10px 15px;border-radius:5px;color:var(--muted)}
-footer{padding:35px 0;text-align:center;color:var(--muted);font-size:13px}
-@media(max-width:650px){nav{align-items:flex-start;flex-direction:column}.hero{padding:70px 0}.navlinks{gap:14px}}
+button{font:inherit}
+.container{width:min(var(--max),90%);margin:auto}
+.gold{color:var(--gold)}
+.eyebrow{
+  color:var(--gold);font:11px 'DM Mono',monospace;
+  text-transform:uppercase;letter-spacing:2.5px;
+}
+.section{padding:105px 0;border-top:1px solid rgba(255,255,255,.07)}
+.section-heading{margin-bottom:42px}
+.section-heading h2{
+  font:600 clamp(30px,4vw,44px) 'Playfair Display',serif;
+  margin:12px 0;
+}
+.section-heading p{color:var(--muted);max-width:660px;font-size:15px}
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(8,13,23,.90);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav{
+  height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px;
+}
+.brand{font:600 19px 'Playfair Display',serif;letter-spacing:.5px}
+.brand span{color:var(--gold)}
+.navlinks{display:flex;gap:27px;align-items:center}
+.navlinks a{font-size:12px;color:var(--muted);transition:.2s}
+.navlinks a:hover{color:var(--gold2)}
+.nav-cta{
+  border:1px solid var(--line);padding:9px 15px;
+  color:var(--gold2)!important;border-radius:2px;
+}
+.menu-btn{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{padding:115px 0 100px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:55px;align-items:center}
+.hero h1{
+  font:600 clamp(47px,7vw,82px)/1.08 'Playfair Display',serif;
+  letter-spacing:-2px;margin:24px 0;
+}
+.hero h1 span{color:var(--gold)}
+.hero-copy{max-width:700px;color:#b4bfcc;font-size:17px;line-height:1.9}
+.hero-note{
+  border-left:2px solid var(--gold);padding-left:16px;
+  color:var(--muted);font-size:13px;margin-top:27px;
+}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:13px 19px;font-size:12px;font-weight:600;
+  border:1px solid var(--line);transition:.25s;
+}
+.btn.primary{background:var(--gold);color:#10151d;border-color:var(--gold)}
+.btn:hover{transform:translateY(-3px);border-color:var(--gold2)}
+.hero-card{
+  background:linear-gradient(145deg,#142237,#0d1725);
+  border:1px solid var(--line);padding:28px;position:relative;
+}
+.hero-card:after{
+  content:"";position:absolute;inset:9px;border:1px solid rgba(200,169,107,.08);
+  pointer-events:none;
+}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:35px}
+.status{font:10px 'DM Mono',monospace;color:var(--green)}
+.hero-monogram{
+  font:600 86px 'Playfair Display',serif;color:var(--gold);
+  text-align:center;padding:18px 0 28px;
+}
+.hero-card h3{font:500 19px 'Playfair Display',serif}
+.hero-card p{color:var(--muted);font-size:12px;margin-top:7px}
+.card-line{border-top:1px solid var(--line);margin:20px 0}
+.card-meta{display:flex;justify-content:space-between;color:var(--muted);font:10px 'DM Mono',monospace}
+.metrics{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  margin-top:75px;
+}
+.metric{padding:25px 20px;border-right:1px solid var(--line)}
+.metric:last-child{border:0}
+.metric strong{display:block;font:24px 'Playfair Display',serif;color:var(--gold2)}
+.metric span{font-size:11px;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px}
+.about-text{color:#b2bdca;font-size:15px;line-height:1.95}
+.about-text p+p{margin-top:18px}
+.info-list{border-top:1px solid var(--line)}
+.info-row{
+  display:flex;justify-content:space-between;gap:15px;
+  padding:16px 0;border-bottom:1px solid var(--line);font-size:13px;
+}
+.info-row span:first-child{color:var(--muted)}
+.info-row span:last-child{text-align:right}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skill-card{
+  background:var(--surface);border:1px solid rgba(255,255,255,.08);
+  padding:25px;transition:.25s;
+}
+.skill-card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.skill-icon{color:var(--gold);font:20px 'DM Mono',monospace}
+.skill-card h3{font:500 19px 'Playfair Display',serif;margin:14px 0 8px}
+.skill-card p{color:var(--muted);font-size:13px}
+.skill-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.tag{
+  font:10px 'DM Mono',monospace;color:var(--gold2);
+  border:1px solid var(--line);padding:5px 8px;
+}
+.project-list{display:grid;gap:25px}
+.project{
+  display:grid;grid-template-columns:1fr 1fr;gap:30px;
+  background:var(--surface);border:1px solid rgba(255,255,255,.08);
+  padding:18px;transition:.3s;
+}
+.project:hover{border-color:var(--line);transform:translateY(-3px)}
+.project-image{
+  background:#101b2a;min-height:260px;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.project-image img{width:100%;height:100%;min-height:260px;object-fit:cover}
+.project-placeholder{
+  color:var(--gold);font:600 48px 'Playfair Display',serif;
+}
+.project-content{padding:20px 15px 20px 0}
+.project-number{font:11px 'DM Mono',monospace;color:var(--gold)}
+.project-content h3{font:600 28px 'Playfair Display',serif;margin:10px 0}
+.project-content p{color:var(--muted);font-size:13px;line-height:1.85}
+.project-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:23px}
+.project-links a{font-size:12px;color:var(--gold2);border-bottom:1px solid var(--line);padding-bottom:4px}
+.project-links a:hover{color:white}
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.method{
+  padding:22px;border-top:2px solid var(--gold);
+  background:var(--surface);
+}
+.method b{font:22px 'Playfair Display',serif;color:var(--gold)}
+.method h3{font-size:15px;margin:13px 0 7px}
+.method p{font-size:12px;color:var(--muted)}
+.focus-box{
+  background:linear-gradient(110deg,#152337,#0e1725);
+  border:1px solid var(--line);padding:38px;
+  display:flex;justify-content:space-between;gap:30px;align-items:center;
+}
+.focus-box h3{font:600 27px 'Playfair Display',serif;margin:8px 0}
+.focus-box p{color:var(--muted);font-size:13px;max-width:650px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact-grid h3{font:600 30px 'Playfair Display',serif;margin:12px 0}
+.contact-grid p{color:var(--muted);font-size:14px}
+.contact-links{display:grid;gap:12px}
+.contact-link{
+  padding:17px;background:var(--surface);border:1px solid rgba(255,255,255,.08);
+  display:flex;justify-content:space-between;font-size:13px;transition:.2s;
+}
+.contact-link:hover{border-color:var(--gold);color:var(--gold2)}
+footer{border-top:1px solid rgba(255,255,255,.08);padding:28px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:850px){
+ .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+ .hero-card{max-width:440px}
+ .skills-grid{grid-template-columns:repeat(2,1fr)}
+ .method-grid{grid-template-columns:repeat(2,1fr)}
+ .project{grid-template-columns:1fr}
+ .project-content{padding:10px}
+}
+@media(max-width:650px){
+ .nav{height:66px}
+ .menu-btn{display:block}
+ .navlinks{
+  display:none;position:absolute;top:66px;left:0;right:0;
+  background:#0b1320;padding:22px 5%;border-bottom:1px solid var(--line);
+  flex-direction:column;align-items:flex-start;
+ }
+ .navlinks.open{display:flex}
+ .hero{padding:75px 0}
+ .hero h1{letter-spacing:-1px}
+ .metrics{grid-template-columns:1fr}
+ .metric{border-right:0;border-bottom:1px solid var(--line)}
+ .skills-grid,.method-grid{grid-template-columns:1fr}
+ .focus-box{align-items:flex-start;flex-direction:column;padding:25px}
+ .footer-inner{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{scroll-behavior:auto!important;transition:none!important}
+ .reveal{opacity:1;transform:none}
+}
 </style>
 </head>
-<body>
 
-<header>
-  <div class="container">
-    <nav>
-      <a class="logo" href="#">AGN<span>.</span></a>
-      <div class="navlinks">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
+<body>
+<header class="topbar">
+ <div class="container nav">
+  <a class="brand" href="#home">AGN<span>.</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+  <nav class="navlinks" id="navLinks">
+   <a href="#about">PROFILE</a>
+   <a href="#expertise">EXPERTISE</a>
+   <a href="#projects">PROJECTS</a>
+   <a href="#approach">APPROACH</a>
+   <a href="#contact" class="nav-cta">CONTACT ↗</a>
+  </nav>
+ </div>
 </header>
 
 <main>
-  <div class="container">
-    <div class="hero">
-      <div class="eyebrow">Finance · Research · Strategy</div>
-      <h1>Alan Gabriel <span>Nte</span></h1>
-      <p>
-        Master's student in Management at Burgundy School of Business,
-        focused on Corporate Finance and Management Control.
-        Interested in Investment Banking, Equity Research, Financial
-        Modeling and Strategic Intelligence.
-      </p>
-      <div class="actions">
-        <a class="btn primary" href="#projects">Explore my projects</a>
-        <a class="btn" href="https://www.linkedin.com/in/alan-gabriel-nte-77b510388/" target="_blank" rel="noopener">LinkedIn Profile</a>
-      </div>
+<section class="hero" id="home">
+ <div class="container">
+  <div class="hero-grid">
+   <div>
+    <div class="eyebrow">Professional Portfolio · 2026</div>
+    <h1>Finance.<br>Analysis.<br><span>Strategic Insight.</span></h1>
+    <p class="hero-copy">
+     I am Alan Gabriel Nte, a Master's student in Management at
+     Burgundy School of Business, focused on Corporate Finance
+     and Management Control. I build practical analytical projects
+     at the intersection of financial analysis, valuation and
+     strategic intelligence.
+    </p>
+    <div class="hero-note">
+     Areas of interest: Investment Banking · Corporate Finance ·
+     Equity Research · Financial Modeling · Strategy
     </div>
+    <div class="hero-actions">
+     <a class="btn primary" href="#projects">EXPLORE MY WORK ↗</a>
+     <a class="btn" href="https://www.linkedin.com/in/alan-gabriel-nte-77b510388/" target="_blank" rel="noopener">LINKEDIN PROFILE ↗</a>
+    </div>
+   </div>
+   <aside class="hero-card">
+    <div class="card-top">
+     <span class="eyebrow">PROFILE / 001</span>
+     <span class="status">● PORTFOLIO ONLINE</span>
+    </div>
+    <div class="hero-monogram">AGN</div>
+    <h3>Alan Gabriel Nte</h3>
+    <p>Corporate Finance & Strategic Intelligence</p>
+    <div class="card-line"></div>
+    <div class="card-meta"><span>BASED IN</span><span>FRANCE</span></div>
+    <div class="card-meta" style="margin-top:12px"><span>EDUCATION</span><span>BSB · MiM</span></div>
+    <div class="card-meta" style="margin-top:12px"><span>FOCUS</span><span>FINANCE & STRATEGY</span></div>
+   </aside>
   </div>
+  <div class="metrics">
+   <div class="metric"><strong>03</strong><span>Deployed digital projects</span></div>
+   <div class="metric"><strong>Finance</strong><span>Core academic focus</span></div>
+   <div class="metric"><strong>Python · Excel</strong><span>Analytical tools</span></div>
+  </div>
+ </div>
+</section>
 
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p class="section-intro">
-        I develop practical projects combining financial analysis,
-        company valuation, data analysis and strategic intelligence.
-        My objective is to strengthen my analytical and technical
-        capabilities through applied work.
-      </p>
-      <div class="card">
-        <h3>Education</h3>
-        <p><strong>Burgundy School of Business</strong><br>
-        Master in Management (MiM)<br>
-        Corporate Finance & Management Control</p>
-      </div>
-    </div>
-  </section>
+<section class="section" id="about">
+ <div class="container reveal">
+  <div class="section-heading">
+   <div class="eyebrow">01 / Professional Profile</div>
+   <h2>About <span class="gold">Me</span></h2>
+   <p>A profile built around analytical thinking, financial understanding and applied technology.</p>
+  </div>
+  <div class="about-grid">
+   <div class="about-text">
+    <p>
+     My academic path at Burgundy School of Business has enabled me
+     to develop a foundation in management, corporate finance and
+     management control. I am particularly interested in understanding
+     how businesses create value, allocate capital and manage risk.
+    </p>
+    <p>
+     Alongside my studies, I develop independent digital projects
+     using Python, Streamlit and Excel. These projects help me
+     explore financial data, company valuation and strategic
+     decision-support methods through practical applications.
+    </p>
+    <p>
+     My professional interests include investment banking,
+     corporate finance, equity research, financial analysis
+     and strategy consulting.
+    </p>
+   </div>
+   <div class="info-list">
+    <div class="info-row"><span>Education</span><span>Burgundy School of Business</span></div>
+    <div class="info-row"><span>Programme</span><span>Master in Management</span></div>
+    <div class="info-row"><span>Academic focus</span><span>Corporate Finance & Management Control</span></div>
+    <div class="info-row"><span>Location</span><span>France</span></div>
+    <div class="info-row"><span>Languages</span><span>French · English</span></div>
+    <div class="info-row"><span>GitHub</span><span><a class="gold" href="https://github.com/Gabriel24nt" target="_blank" rel="noopener">Gabriel24nt ↗</a></span></div>
+   </div>
+  </div>
+ </div>
+</section>
 
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title">Technical Skills & Areas of Interest</h2>
-      <p class="section-intro">Tools and disciplines developed through coursework and personal projects.</p>
-      <div class="skills">
-        <span class="skill">Corporate Finance</span>
-        <span class="skill">Financial Analysis</span>
-        <span class="skill">Equity Research</span>
-        <span class="skill">Financial Modeling</span>
-        <span class="skill">DCF Valuation</span>
-        <span class="skill">Strategic Intelligence</span>
-        <span class="skill">Country Risk</span>
-        <span class="skill">Python</span>
-        <span class="skill">Excel</span>
-        <span class="skill">Streamlit</span>
-        <span class="skill">Pandas</span>
-        <span class="skill">NumPy</span>
-        <span class="skill">Git & GitHub</span>
-      </div>
-    </div>
-  </section>
+<section class="section" id="expertise">
+ <div class="container reveal">
+  <div class="section-heading">
+   <div class="eyebrow">02 / Areas of Development</div>
+   <h2>Expertise & <span class="gold">Interests</span></h2>
+   <p>Core disciplines and tools explored through academic work and independent projects. This section reflects areas of development, not professional certifications.</p>
+  </div>
+  <div class="skills-grid">
+   <article class="skill-card">
+    <div class="skill-icon">01 /</div>
+    <h3>Corporate Finance</h3>
+    <p>Understanding financial performance, capital structure, profitability and business value creation.</p>
+    <div class="skill-tags"><span class="tag">Financial Analysis</span><span class="tag">Accounting</span><span class="tag">Ratios</span></div>
+   </article>
+   <article class="skill-card">
+    <div class="skill-icon">02 /</div>
+    <h3>Valuation & Modeling</h3>
+    <p>Exploring company valuation frameworks and financial modeling through applied work.</p>
+    <div class="skill-tags"><span class="tag">DCF</span><span class="tag">WACC</span><span class="tag">Multiples</span></div>
+   </article>
+   <article class="skill-card">
+    <div class="skill-icon">03 /</div>
+    <h3>Equity Research</h3>
+    <p>Analyzing company fundamentals, financial statements and investment assumptions.</p>
+    <div class="skill-tags"><span class="tag">Company Analysis</span><span class="tag">Investment Thesis</span></div>
+   </article>
+   <article class="skill-card">
+    <div class="skill-icon">04 /</div>
+    <h3>Strategic Intelligence</h3>
+    <p>Exploring geopolitical, economic and country-risk information for decision support.</p>
+    <div class="skill-tags"><span class="tag">Country Risk</span><span class="tag">OSINT</span><span class="tag">Geopolitics</span></div>
+   </article>
+   <article class="skill-card">
+    <div class="skill-icon">05 /</div>
+    <h3>Data & Programming</h3>
+    <p>Building data-driven applications and analytical workflows with Python-based tools.</p>
+    <div class="skill-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span></div>
+   </article>
+   <article class="skill-card">
+    <div class="skill-icon">06 /</div>
+    <h3>Productivity & Reporting</h3>
+    <p>Working with spreadsheets, structured analysis and digital reporting environments.</p>
+    <div class="skill-tags"><span class="tag">Excel</span><span class="tag">Streamlit</span><span class="tag">GitHub</span></div>
+   </article>
+  </div>
+ </div>
+</section>
 
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">Selected Projects</h2>
-      <p class="section-intro">Applied projects in finance, valuation and strategic intelligence.</p>
-      <div class="grid">
-        <article class="card">
-          <h3>STRATOS</h3>
-          <p>Strategic intelligence platform for geopolitical analysis, economic intelligence and country risk monitoring.</p>
-          <span class="tag">Python</span><span class="tag">Streamlit</span>
-          <br><a href="https://stratos-meridian.streamlit.app/" target="_blank" rel="noopener">Live Application ↗</a>
-          <br><a href="https://github.com/Gabriel24nt/STRATOS" target="_blank" rel="noopener">Source Code ↗</a>
-        </article>
-        <article class="card">
-          <h3>META Equity Research</h3>
-          <p>Equity research project covering financial statements, DCF valuation and investment analysis.</p>
-          <span class="tag">Equity Research</span><span class="tag">DCF</span>
-          <br><a href="https://meta-equity-research-app.streamlit.app/" target="_blank" rel="noopener">Live Application ↗</a>
-          <br><a href="https://github.com/Gabriel24nt/META-Equity-Research" target="_blank" rel="noopener">Source Code ↗</a>
-        </article>
-        <article class="card">
-          <h3>ORBITE</h3>
-          <p>Corporate finance and financial intelligence platform for company analysis and valuation.</p>
-          <span class="tag">Corporate Finance</span><span class="tag">Valuation</span>
-          <br><a href="https://orbite-equity-research-corporate-finance.streamlit.app/" target="_blank" rel="noopener">Live Application ↗</a>
-          <br><a href="https://github.com/Gabriel24nt/Orbite-EQUITY-RESEARCH-CORPORATE-FINANCE" target="_blank" rel="noopener">Source Code ↗</a>
-        </article>
-      </div>
-    </div>
-  </section>
+<section class="section" id="projects">
+ <div class="container reveal">
+  <div class="section-heading">
+   <div class="eyebrow">03 / Selected Work</div>
+   <h2>Projects & <span class="gold">Applications</span></h2>
+   <p>Independent projects developed to apply financial, analytical and technical concepts in practical environments.</p>
+  </div>
+  <div class="project-list">
 
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-intro">Open to internship opportunities and professional discussions in finance and strategy.</p>
-      <div class="actions">
-        <a class="btn primary" href="https://www.linkedin.com/in/alan-gabriel-nte-77b510388/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-        <a class="btn" href="https://github.com/Gabriel24nt" target="_blank" rel="noopener">Explore GitHub</a>
-      </div>
+   <article class="project">
+    <div class="project-image">
+     <img src="screenshots/stratos-dashboard.png" alt="STRATOS strategic intelligence dashboard" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+     <span class="project-placeholder" style="display:none">STRATOS</span>
     </div>
-  </section>
+    <div class="project-content">
+     <div class="project-number">PROJECT 01 · STRATEGIC INTELLIGENCE</div>
+     <h3>STRATOS</h3>
+     <p>
+      A strategic intelligence platform focused on geopolitical
+      analysis, economic intelligence and country-risk monitoring.
+      The project explores how structured information can support
+      strategic understanding and decision-making.
+     </p>
+     <div class="skill-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">SQLite</span><span class="tag">Pandas</span></div>
+     <div class="project-links">
+      <a href="https://stratos-meridian.streamlit.app/" target="_blank" rel="noopener">LIVE APPLICATION ↗</a>
+      <a href="https://github.com/Gabriel24nt/STRATOS" target="_blank" rel="noopener">SOURCE CODE ↗</a>
+     </div>
+    </div>
+   </article>
+
+   <article class="project">
+    <div class="project-image">
+     <img src="screenshots/meta-dashboard.png" alt="META Equity Research dashboard" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+     <span class="project-placeholder" style="display:none">META</span>
+    </div>
+    <div class="project-content">
+     <div class="project-number">PROJECT 02 · EQUITY RESEARCH</div>
+     <h3>META Equity Research</h3>
+     <p>
+      An applied equity-research project centered on Meta Platforms.
+      It brings together company information, financial statement
+      exploration, a simplified DCF valuation framework and
+      investment-thesis development.
+     </p>
+     <div class="skill-tags"><span class="tag">Equity Research</span><span class="tag">DCF</span><span class="tag">Python</span><span class="tag">Excel</span></div>
+     <div class="project-links">
+      <a href="https://meta-equity-research-app.streamlit.app/" target="_blank" rel="noopener">LIVE APPLICATION ↗</a>
+      <a href="https://github.com/Gabriel24nt/META-Equity-Research" target="_blank" rel="noopener">SOURCE CODE ↗</a>
+     </div>
+    </div>
+   </article>
+
+   <article class="project">
+    <div class="project-image">
+     <img src="screenshots/orbite-dashboard.png" alt="ORBITE corporate finance dashboard" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+     <span class="project-placeholder" style="display:none">ORBITE</span>
+    </div>
+    <div class="project-content">
+     <div class="project-number">PROJECT 03 · CORPORATE FINANCE</div>
+     <h3>ORBITE</h3>
+     <p>
+      A corporate-finance and financial-intelligence application
+      designed to explore company analysis, financial modeling
+      and valuation concepts in an interactive environment.
+     </p>
+     <div class="skill-tags"><span class="tag">Corporate Finance</span><span class="tag">Valuation</span><span class="tag">Streamlit</span><span class="tag">Python</span></div>
+     <div class="project-links">
+      <a href="https://orbite-equity-research-corporate-finance.streamlit.app/" target="_blank" rel="noopener">LIVE APPLICATION ↗</a>
+      <a href="https://github.com/Gabriel24nt/Orbite-EQUITY-RESEARCH-CORPORATE-FINANCE" target="_blank" rel="noopener">SOURCE CODE ↗</a>
+     </div>
+    </div>
+   </article>
+
+  </div>
+ </div>
+</section>
+
+<section class="section" id="approach">
+ <div class="container reveal">
+  <div class="section-heading">
+   <div class="eyebrow">04 / Working Method</div>
+   <h2>From Data to <span class="gold">Decision</span></h2>
+   <p>A structured approach used to organize independent analytical and technical projects.</p>
+  </div>
+  <div class="method-grid">
+   <div class="method"><b>01</b><h3>Research</h3><p>Identify the question, gather relevant information and define the analytical scope.</p></div>
+   <div class="method"><b>02</b><h3>Structure</h3><p>Organize data, assumptions and analytical frameworks into a consistent format.</p></div>
+   <div class="method"><b>03</b><h3>Analyze</h3><p>Explore financial or strategic indicators and develop evidence-based interpretations.</p></div>
+   <div class="method"><b>04</b><h3>Present</h3><p>Translate the analysis into clear outputs, visualizations and decision-support tools.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="container reveal">
+  <div class="focus-box">
+   <div>
+    <div class="eyebrow">Professional Direction</div>
+    <h3>Building a career in <span class="gold">Finance & Strategy</span></h3>
+    <p>
+     Interested in internship opportunities and professional discussions
+     across investment banking, corporate finance, equity research,
+     financial analysis and strategy consulting.
+    </p>
+   </div>
+   <a class="btn primary" href="https://www.linkedin.com/in/alan-gabriel-nte-77b510388/" target="_blank" rel="noopener">CONNECT WITH ME ↗</a>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="contact">
+ <div class="container reveal">
+  <div class="section-heading">
+   <div class="eyebrow">05 / Contact</div>
+   <h2>Let's Start a <span class="gold">Conversation</span></h2>
+   <p>For professional opportunities, project discussions or networking.</p>
+  </div>
+  <div class="contact-grid">
+   <div>
+    <h3>Open to meaningful<br><span class="gold">professional connections.</span></h3>
+    <p>Feel free to explore my work or connect with me through the platforms below.</p>
+   </div>
+   <div class="contact-links">
+    <a class="contact-link" href="https://www.linkedin.com/in/alan-gabriel-nte-77b510388/" target="_blank" rel="noopener"><span>LinkedIn</span><span>CONNECT ↗</span></a>
+    <a class="contact-link" href="https://github.com/Gabriel24nt" target="_blank" rel="noopener"><span>GitHub</span><span>VIEW REPOSITORIES ↗</span></a>
+    <a class="contact-link" href="https://stratos-meridian.streamlit.app/" target="_blank" rel="noopener"><span>STRATOS</span><span>LIVE PROJECT ↗</span></a>
+   </div>
+  </div>
+ </div>
+</section>
 </main>
 
 <footer>
-  <div class="container">© 2026 Alan Gabriel Nte · Finance & Strategic Intelligence</div>
+ <div class="container footer-inner">
+  <span>© 2026 ALAN GABRIEL NTE · PROFESSIONAL PORTFOLIO</span>
+  <span>FINANCE · RESEARCH · STRATEGIC INTELLIGENCE</span>
+ </div>
 </footer>
 
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(link=>{
+ link.addEventListener('click',()=>navLinks.classList.remove('open'));
+});
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add('visible');
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
 </body>
 </html>
