@@ -1,1 +1,175 @@
-# Gabriel24nt.github.io
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional portfolio of Alan Gabriel Nte — Corporate Finance, Equity Research, Financial Modeling and Strategic Intelligence.">
+<title>Alan Gabriel Nte | Finance & Strategy</title>
+<style>
+:root {
+  --bg:#080d18;
+  --panel:#101a2b;
+  --text:#edf2fa;
+  --muted:#a6b3c7;
+  --accent:#67c6bd;
+  --border:#24334a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.container{width:min(1100px,90%);margin:auto}
+header{border-bottom:1px solid var(--border);padding:20px 0}
+nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:20px;font-weight:bold;letter-spacing:1px}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.navlinks a:hover{color:var(--accent)}
+.hero{padding:105px 0 85px;max-width:850px}
+.eyebrow{color:var(--accent);font-size:13px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(42px,7vw,68px);line-height:1.12;margin:20px 0}
+h1 span{color:var(--accent)}
+.hero p{color:var(--muted);font-size:18px;max-width:720px}
+.actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:12px 20px;border:1px solid var(--accent);border-radius:5px;font-weight:bold}
+.btn.primary{background:var(--accent);color:#07121a}
+.btn:hover{opacity:.85}
+section{padding:65px 0;border-top:1px solid var(--border)}
+.section-title{font-size:30px;margin-bottom:12px}
+.section-intro{color:var(--muted);margin-bottom:30px;max-width:700px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:24px}
+.card h3{font-size:20px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:14px}
+.card a{display:inline-block;color:var(--accent);font-weight:bold;margin-top:18px}
+.tag{display:inline-block;color:var(--accent);font-size:12px;margin:12px 6px 0 0;padding:4px 9px;border:1px solid var(--border);border-radius:20px}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{background:var(--panel);border:1px solid var(--border);padding:10px 15px;border-radius:5px;color:var(--muted)}
+footer{padding:35px 0;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:650px){nav{align-items:flex-start;flex-direction:column}.hero{padding:70px 0}.navlinks{gap:14px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#">AGN<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="hero">
+      <div class="eyebrow">Finance · Research · Strategy</div>
+      <h1>Alan Gabriel <span>Nte</span></h1>
+      <p>
+        Master's student in Management at Burgundy School of Business,
+        focused on Corporate Finance and Management Control.
+        Interested in Investment Banking, Equity Research, Financial
+        Modeling and Strategic Intelligence.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore my projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/alan-gabriel-nte-77b510388/" target="_blank" rel="noopener">LinkedIn Profile</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-intro">
+        I develop practical projects combining financial analysis,
+        company valuation, data analysis and strategic intelligence.
+        My objective is to strengthen my analytical and technical
+        capabilities through applied work.
+      </p>
+      <div class="card">
+        <h3>Education</h3>
+        <p><strong>Burgundy School of Business</strong><br>
+        Master in Management (MiM)<br>
+        Corporate Finance & Management Control</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills & Areas of Interest</h2>
+      <p class="section-intro">Tools and disciplines developed through coursework and personal projects.</p>
+      <div class="skills">
+        <span class="skill">Corporate Finance</span>
+        <span class="skill">Financial Analysis</span>
+        <span class="skill">Equity Research</span>
+        <span class="skill">Financial Modeling</span>
+        <span class="skill">DCF Valuation</span>
+        <span class="skill">Strategic Intelligence</span>
+        <span class="skill">Country Risk</span>
+        <span class="skill">Python</span>
+        <span class="skill">Excel</span>
+        <span class="skill">Streamlit</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">NumPy</span>
+        <span class="skill">Git & GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="section-intro">Applied projects in finance, valuation and strategic intelligence.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>STRATOS</h3>
+          <p>Strategic intelligence platform for geopolitical analysis, economic intelligence and country risk monitoring.</p>
+          <span class="tag">Python</span><span class="tag">Streamlit</span>
+          <br><a href="https://stratos-meridian.streamlit.app/" target="_blank" rel="noopener">Live Application ↗</a>
+          <br><a href="https://github.com/Gabriel24nt/STRATOS" target="_blank" rel="noopener">Source Code ↗</a>
+        </article>
+        <article class="card">
+          <h3>META Equity Research</h3>
+          <p>Equity research project covering financial statements, DCF valuation and investment analysis.</p>
+          <span class="tag">Equity Research</span><span class="tag">DCF</span>
+          <br><a href="https://meta-equity-research-app.streamlit.app/" target="_blank" rel="noopener">Live Application ↗</a>
+          <br><a href="https://github.com/Gabriel24nt/META-Equity-Research" target="_blank" rel="noopener">Source Code ↗</a>
+        </article>
+        <article class="card">
+          <h3>ORBITE</h3>
+          <p>Corporate finance and financial intelligence platform for company analysis and valuation.</p>
+          <span class="tag">Corporate Finance</span><span class="tag">Valuation</span>
+          <br><a href="https://orbite-equity-research-corporate-finance.streamlit.app/" target="_blank" rel="noopener">Live Application ↗</a>
+          <br><a href="https://github.com/Gabriel24nt/Orbite-EQUITY-RESEARCH-CORPORATE-FINANCE" target="_blank" rel="noopener">Source Code ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-intro">Open to internship opportunities and professional discussions in finance and strategy.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.linkedin.com/in/alan-gabriel-nte-77b510388/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn" href="https://github.com/Gabriel24nt" target="_blank" rel="noopener">Explore GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Alan Gabriel Nte · Finance & Strategic Intelligence</div>
+</footer>
+
+</body>
+</html>
+
